@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>
+  RNG
+</title>
+<body>
+  Input a range, and click "GO!" for a random integer between (inclusive) the two.
+  <script src="rng.js" charset="utf-8"></script>
+  <form>
+    Minimum &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Maximum<br>
+    <input type="number" name="min" id="min">
+    <input type="number" name="max" id="max">
+    <input type="button" onclick="myFunction()" value = "GO!">
+  </form>
+  <h2>
+  <p id="demo"></p>
+  </h2>
+  <script>
+  function myFunction() {
+    var temp = random(parseInt(document.getElementById('min').value), parseInt(document.getElementById('max').value));
+    console.log(temp);
+    document.getElementById('demo').innerHTML = temp;
+  }
+  </script>
+
+</body>
+</html>
