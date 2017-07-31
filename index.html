@@ -3,25 +3,21 @@
 <title>
   pRNG
 </title>
+<script src="max.js" charset="utf-8"></script>
 <body>
-  Input a range, and click "GO!" for a (pseudo) random integer between and including the two.
+  Input a range, and click "GO!" for a random integer between (inclusive) the two.
   <script src="rng.js" charset="utf-8"></script>
   <form>
     Minimum &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Maximum<br>
-    <input type="number" name="min" id="min">
-    <input type="number" name="max" id="max">
+    <input type="number" name="min" id="min" oninput="replaceGraph()">
+    <input type="number" name="max" id="max" oninput="replaceGraph()">
     <input type="button" onclick="myFunction()" value = "GO!">
   </form>
   <h2>
-  <p id="demo"></p>
+  <p id="result"></p>
   </h2>
-  <script>
-  function myFunction() {
-    var temp = random(parseInt(document.getElementById('min').value), parseInt(document.getElementById('max').value));
-    console.log(temp);
-    document.getElementById('demo').innerHTML = temp;
-  }
-  </script>
-
+  <canvas id="canvas" width="400" height="400" style="border: 1px solid blue"></canvas>
+  <script src="main.js" charset="utf-8"></script>
+  <script src="graph.js" charset="utf-8"></script>
 </body>
 </html>
